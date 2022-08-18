@@ -1,0 +1,139 @@
+//Ranges for react-boostrap daterangepicker
+ranges={{
+                Today: [moment(), moment()],
+                Yesterday: [
+                  moment().subtract(1, "days"),
+                  moment().subtract(1, "days"),
+                ],
+                "Last 7 Days": [moment().subtract(6, "days"), moment()],
+                "Last 30 Days": [moment().subtract(29, "days"), moment()],
+                "This Month": [
+                  moment().startOf("month"),
+                  moment().endOf("month"),
+                ],
+                "Last Month": [
+                  moment()
+                    .subtract(1, "month")
+                    .startOf("month"),
+                  moment()
+                    .subtract(1, "month")
+                    .endOf("month"),
+                ],
+                "Last Year": [
+                  moment()
+                    .subtract(1, "year")
+                    .startOf("year"),
+                  moment()
+                    .subtract(1, "year")
+                    .endOf("year"),
+                ],
+              }}
+
+
+const tempRooms = [];
+      const availability = false;
+  
+      for (const room of roomsDuplicate) {
+        if (room.currentbookings.length > 0) {
+          for (const booking of room.currentbookings) {
+            if (
+              (
+                moment(picker.startDate._d).format("DD-MMM-YYYY")
+              ).isBetween(
+                booking.fromDate, booking.toDate
+              ) && moment(
+                (picker.endDate._d).format("DD-MMM-YYYY")
+              ).isBetween(
+                booking.fromDate, booking.toDate
+              )
+            ) {
+             if (moment(picker.startDate._d).format("DD-MMM-YYYY") !== booking.fromDate &&
+             moment(picker.startDate._d).format("DD-MMM-YYYY") !== booking.todate &&
+             moment(picker.endDate._d).format("DD-MMM-YYYY") !== booking.fromDate &&
+             moment(picker.endDate._d).format("DD-MMM-YYYY") !== booking.todate)
+            {
+              availability = true;
+             }
+             
+             
+            } 
+          }
+        }
+  
+        if (availability === true || room.currentbookings.length === 0) {
+          tempRooms.push(room);
+          setRooms(tempRooms);
+        }
+        
+      }
+
+
+
+const tempRooms = [];
+    // var availability = false;
+
+    // const fromDate = moment(picker.startDate._d).format("DD-MMM-YYYY");
+    // const toDate = moment(picker.endDate._d).format("DD-MMM-YYYY");
+
+    // for (const room of roomsDuplicate) {
+    //   if (room.currentbookings.length > 0) {
+    //     const booking = room.currentbookings[0];
+    //     const checkin = moment(booking.from).format("DD-MMM-YYYY");
+    //     const checkout = moment(booking.to).format("DD-MMM-YYYY");
+
+    //       if (!moment(fromDate).isBetween(checkin, checkout) && 
+    //       !moment(toDate).isBetween(checkin, checkout)) {
+
+
+    //       if (
+    //         fromDate !== checkin &&
+    //         fromDate !== checkout &&
+    //         toDate !== checkin &&
+    //         toDate !== checkout
+    //       ) {
+    //         availability = true;
+    //       }
+          
+    //       if (availability == true || room.currentbookings.length === 0) {
+    //         tempRooms.push(room);
+    //       }
+          
+    //   }
+
+    // }
+    //   setRooms(tempRooms);
+    // };
+
+
+
+
+<div className="row">
+                <div className="col-md-12">
+                  <Table striped bordered hover variant="light" size="sm">
+                    <thead>
+                      <tr>
+                        <th>Booking ID</th>
+                        <th>Room Name</th>
+                        <th>Room ID</th>
+                        <th>Check-in</th>
+                        <th>Check-out</th>
+                        <th>Total Days</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{booking._id}</td>
+                        <td>{booking.roomName}</td>
+                        <td>{booking.roomID}</td>
+                        <td>{booking.from}</td>
+                        <td>{booking.to}</td>
+                        <td>{booking.totalDays}</td>
+                        <td>{booking.totalAmount}</td>
+                        <td>{booking.status}</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </div>
+              </div>

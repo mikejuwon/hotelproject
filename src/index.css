@@ -1,13 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@600&family=Send+Flowers&family=Teko:wght@300&family=Ubuntu:wght@300&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(169, 181, 216);
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  font-family: "Montserrat", sans-serif !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.navbar {
+  background-color: rgb(27, 68, 82) !important;
+}
+
+.navbar-brand {
+  color: rgb(255, 255, 255) !important;
+  font-family: "Lobster", cursive !important;
+  font-size: larger !important;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+  text-align: right !important;
+}
+
+/* .nav-link:hover {
+  text-decoration: underline !important;
+} */
+
+/* .navbar-nav,
+nav-header {
+  margin-left: auto !important;
+} */
+
+.imgSmall {
+  height: 200px;
+  width: 100% !important;
+  border-radius: 5px !important;
+}
+
+p {
+  font-size: 16px !important;
+}
+
+b {
+  font-weight: bolder !important;
+}
+
+h1 {
+  font-size: 18px !important;
+}
+
+h2 {
+  font-weight: bold !important;
+  padding: 10px !important;
+  font-size: 23px !important;
+  text-align: center;
+}
+
+.bxs {
+  box-shadow: rgba(99, 75, 75, 0.4) -5px 5px,
+    rgba(113, 197, 236, 0.3) -10px 10px, rgba(188, 97, 241, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  margin-bottom: 20px !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+}
+
+.bxs2 {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-bottom: 20px !important;
+  border-radius: 5px !important;
+  padding: 20px !important;
+}
+
+.bxs3 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.btn {
+  background-color: rgb(27, 68, 82) !important;
+  color: #fff !important;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(27, 68, 82) !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+.imgBig {
+  height: 300px;
+  width: 100% !important;
+  border-radius: 5px !important;
+}
+
+input,
+select {
+  border: 2px solid rgb(27, 68, 82) !important;
+  box-shadow: none !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 40px !important;
+  display: flex !important;
+  border-radius: 5px !important;
+}
+
+.dateBtn {
+  border: 2px solid rgb(27, 68, 82) !important;
+  box-shadow: none !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 30px !important;
+  display: flex !important;
+  border-radius: 5px !important;
+  font-size: normal !important;
+}
+
+.filterBar {
+  margin: 20px 100px 10px 100px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  
+}
+
+.Tabs {
+  background-color: rgb(178, 211, 223) !important;
+}
+
+.profileTab {
+  margin: auto !important;
+}
+
+.adminHead {
+  font-size: 25px !important;
+}
+
+.landing {
+  background-color: black !important;
+  height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 150px;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+}
+
+.landingHead {
+  color: white !important;
+  font-size: 100px !important;
+}
+
+.landingQuote {
+  color: white !important;
+  font-size: 15px !important;
+  margin-top: 30px !important;
+  text-align: center !important;
+  
+}
+
+.landingBtn {
+  color: white !important;
+  background-color: black !important;
+  margin-top: 50px !important;
 }
